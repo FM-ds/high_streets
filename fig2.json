@@ -1,0 +1,82 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 450,
+    "height": 500,
+    "config": {"font": "Circular Std"},
+    "hconcat": [
+      {
+        "layer": [
+          {
+            "data": {
+              "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/043f01a4958137265fd4613603dc817f0ea7d006/LAD_Debt/lad.geojson",
+              "format": {"type": "json", "property": "features"}
+            },
+            "mark": {"type": "geoshape", "fill": "rgba(0,0,0,0.1)"},
+            "projection": {"type": "naturalEarth1"}
+          },
+          {
+            "data": {
+              "url": "https://raw.githubusercontent.com/FM-ds/FM-ds.github.io/refs/heads/main/roll_prices.csv"
+            },
+            "mark": {"type": "circle", "size": 4},
+            "encoding": {
+              "order": {"field": "eatInPrice"},
+              "color": {
+                "scale": {"range": ["#0063AF", "#36B7B4", "#E6224B"]},
+                "legend": {
+                  "orient": "top",
+                  "labelExpr": "'£'+datum.value",
+                  "title": "Vegan Sausage Roll"
+                },
+                "field": "eatInPrice"
+              },
+              "latitude": {"field": "lat"},
+              "longitude": {"field": "long"}
+            }
+          }
+        ]
+      },
+      {
+        "layer": [
+          {
+            "data": {
+              "url": "https://raw.githubusercontent.com/jhellingsdata/RADataHub/043f01a4958137265fd4613603dc817f0ea7d006/LAD_Debt/lad.geojson",
+              "format": {"type": "json", "property": "features"}
+            },
+            "mark": {"type": "geoshape", "fill": "rgba(0,0,0,0.1)"},
+            "projection": {"type": "naturalEarth1"}
+          },
+          {
+            "data": {
+              "url": "https://raw.githubusercontent.com/FM-ds/FM-ds.github.io/refs/heads/main/prices_locations.csv"
+            },
+            "mark": {"type": "circle", "size": 8},
+            "encoding": {
+              "order": {"field": "guiness_price"},
+              "color": {
+                "legend": {
+                  "orient": "top",
+                  "labelExpr": "datum.value>0?('£'+format(datum.value, '.2f')):''",
+                  "title": "Guinness (1 pint)"
+                },
+                "field": "guiness_price",
+                "scale": {
+                  "range": [
+                    "#0063AF",
+                    "#179FDB",
+                    "#36B7B4",
+                    "#F4C245",
+                    "#E6224B"
+                  ],
+                  "type": "quantize"
+                },
+                "type": "quantitative"
+              },
+              "latitude": {"field": "lat"},
+              "longitude": {"field": "long"}
+            }
+          }
+        ]
+      }
+    ]
+  }

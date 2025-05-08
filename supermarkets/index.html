@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Supermarket Hex Ring</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+    #supermarketSelect {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+      padding: 8px;
+    }
+    svg {
+      width: 100vw;
+      height: 100vh;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+<select id="supermarketSelect" onchange="groupBySupermarket(this.value)">
+  <option value="tesco">Tesco</option>
+  <option value="sainsburys">Sainsburys</option>
+  <option value="morrisons">Morrisons</option>
+  <option value="lidl">Lidl</option>
+  <option value="waitrose" selected>Waitrose</option>
+  <option value="iceland">Iceland</option>
+  <option value="marks and spencer">M&S</option>
+</select>
+
+<svg id="hexMap"></svg>
+
+<script>
+const svg = d3.select("#hexMap");
+const width = window.innerWidth;
+const height = window.innerHeight;
+
+const projection = d3.geoIdentity().reflectY(true);
+const path = d3.geoPath().projection(projection);
+
+const colorScale = d3.scaleOrdinal()
+  .domain(["Con", "Lab", "LD", "SNP", "Green"])
+  .range(["#4477AA", "#AA4444", "#EECB5F", "#88C", "#5C9"]);
+
+let hexes;
+
+function getTranslateNeededForXY(element, x, y) {
+  const bbox = element.node().getBBox();
+  const currentX = bbox.x + bbox.width / 2;
+  const currentY = bbox.y + bbox.height / 2;
+  return `translate(${x - currentX}, ${y - currentY})`;
+}
+
+function buildHexRing(selection, centerX, centerY) {
+  const n = selection.size();
+  const radius = 100 + 10 * Math.sqrt(n); // scale spacing with size
+  selection.transition()
+    .duration(1000)
+    .attr("transform", (d, i) => {
+      const angle = 2 * Math.PI * i / n;
+      const x = centerX + radius * Math.cos(angle);
+      const y = centerY + radius * Math.sin(angle);
+      return getTranslateNeededForXY(d3.select(this), x, y);
+    });
+}
+
+function groupBySupermarket(supermarket = "waitrose") {
+  const has = hexes.filter(d => d.properties[`has_${supermarket}`] === "True");
+  const hasnt = hexes.filter(d => d.properties[`has_${supermarket}`] !== "True");
+
+  buildHexRing(has, width * 0.7, height * 0.4);
+  buildHexRing(hasnt, width * 0.3, height * 0.6);
+}
+
+// Load actual geojson and render
+fetch("hexes.geojson")
+  .then(res => res.json())
+  .then(data => {
+    projection.fitSize([width, height], data);
+    hexes = svg.selectAll(".hex")
+      .data(data.features)
+      .enter()
+      .append("path")
+      .attr("class", "hex")
+      .attr("d", path)
+      .attr("fill", d => colorScale(d.properties.winner_2024) || "#ccc")
+      .attr("stroke", "#999");
+
+    groupBySupermarket(); // initial render
+  })
+  .catch(err => {
+    console.error("Failed to load hexes.geojson:", err);
+  });
+</script>
+
+</body>
+</html>
