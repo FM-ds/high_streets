@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gail's by Constituency</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+    @font-face {
+      font-family: 'Circular Std';
+      src: url('circular-std/CircularStd-Book.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+  
+    body {
+      font-family: 'Circular Std', sans-serif;
+      margin: 40px;
+    }
+  
+    .section-title {
+      font-size: 20px;
+      margin: 30px 0 10px;
+    }
+  
+    .party-count {
+      margin-left: 8px;
+      font-size: 14px;
+    }
+  
+    .party-count span {
+      margin-right: 8px;
+    }
+  
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(20, 20px);
+      gap: 4px;
+    }
+  
+    .tile {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+  
+    .tooltip {
+      position: absolute;
+      background: white;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      pointer-events: none;
+      font-size: 12px;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+      font-family: 'Circular Std', sans-serif;
+    }
+  
+    .london-section {
+      opacity: 0.7;
+    }
+  </style>
+  </head>
+  <body>
+  
+    <div class="section-title">
+      Outside London
+      <span id="outside-counts" class="party-count"></span>
+    </div>
+    <div id="outside" class="grid"></div>
+  
+    <div class="section-title london-section">
+      London
+      <span id="london-counts" class="party-count"></span>
+    </div>
+    <div id="london" class="grid london-section"></div>
+  
+    <div class="tooltip" style="display: none;"></div>
+  
+    <script>
+        const partyColours = {
+          'Lab': '#DC241f',
+          'Con': '#0087DC',
+          'LD': '#FAA61A',
+          'LibDem': '#FAA61A',
+          'Liberal Democrats': '#FAA61A',
+          'SNP': '#FFF95D',
+          'Green': '#6AB023',
+          'GRN': '#6AB023',
+          'Plaid': '#008142',
+          'Reform': '#12B6CF',
+          'REF': '#12B6CF',
+          'Ind': '#999999'
+        };
+      
+        const partyShortNames = {
+          'Lab': 'Lab',
+          'Con': 'Con',
+          'LD': 'LD',
+          'LibDem': 'LD',
+          'Liberal Democrats': 'LD',
+          'SNP': 'SNP',
+          'Green': 'Grn',
+          'GRN': 'Grn',
+          'Plaid': 'Plaid',
+          'Reform': 'Ref',
+          'REF': 'Ref',
+          'Ind': 'Ind'
+        };
+      
+        d3.json('gails_constituencies.json').then(data => {
+          // Normalize party names
+          data.forEach(d => {
+            if (['LD', 'LibDem'].includes(d["First party"])) {
+              d["First party"] = "Liberal Democrats";
+            } else if (d["First party"] === "Green") {
+              d["First party"] = "GRN";
+            } else if (d["First party"] === "Reform") {
+              d["First party"] = "REF";
+            }
+          });
+      
+          // Sort by party
+          data.sort((a, b) => d3.ascending(a["First party"], b["First party"]));
+      
+          const outside = data.filter(d => !d.is_London);
+          const london = data.filter(d => d.is_London);
+      
+          const tooltip = d3.select('.tooltip');
+      
+          function drawGrid(container, dataset) {
+            const grid = d3.select(container);
+      
+            grid.selectAll('div')
+              .data(dataset)
+              .join('div')
+              .attr('class', 'tile')
+              .style('background-color', d => partyColours[d["First party"]] || '#ccc')
+              .on('mouseover', (event, d) => {
+                const party = partyShortNames[d["First party"]] || d["First party"];
+                tooltip.style('display', 'block')
+                  .html(`<strong>${d["Constituency name"]}</strong><br>${party}<br>Gail’s: ${d["gails_count"]}`);
+              })
+              .on('mousemove', (event) => {
+                tooltip.style('left', (event.pageX + 10) + 'px')
+                       .style('top', (event.pageY - 28) + 'px');
+              })
+              .on('mouseout', () => tooltip.style('display', 'none'));
+          }
+      
+          function renderPartyBreakdown(dataset, containerId) {
+            const counts = d3.rollup(
+              dataset,
+              v => v.length,
+              d => d["First party"]
+            );
+      
+            const sorted = Array.from(counts.entries())
+              .sort((a, b) => d3.descending(a[1], b[1]));
+      
+            const span = d3.select(containerId);
+            span.selectAll('span')
+              .data(sorted)
+              .join('span')
+              .style('color', ([party]) => partyColours[party] || '#000')
+              .text(([party, count]) => `${count} ${partyShortNames[party] || party}`)
+              .style('margin-right', '8px');
+          }
+      
+          drawGrid('#outside', outside);
+          drawGrid('#london', london);
+      
+          renderPartyBreakdown(outside, '#outside-counts');
+          renderPartyBreakdown(london, '#london-counts');
+        });
+      </script>  </body>
+  </html>

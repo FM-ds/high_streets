@@ -1,0 +1,839 @@
+[
+    {
+        "ONS ID":"E14001065",
+        "Constituency name":"Altrincham and Sale West",
+        "Region name":"North West",
+        "First party":"Lab",
+        "PCON24CD":"E14001065",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001077",
+        "Constituency name":"Basildon and Billericay",
+        "Region name":"East of England",
+        "First party":"Con",
+        "PCON24CD":"E14001077",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001080",
+        "Constituency name":"Bath",
+        "Region name":"South West",
+        "First party":"LD",
+        "PCON24CD":"E14001080",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001081",
+        "Constituency name":"Battersea",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001081",
+        "gails_count":2,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001082",
+        "Constituency name":"Beaconsfield",
+        "Region name":"South East",
+        "First party":"Con",
+        "PCON24CD":"E14001082",
+        "gails_count":2,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001085",
+        "Constituency name":"Bermondsey and Old Southwark",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001085",
+        "gails_count":6,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001086",
+        "Constituency name":"Bethnal Green and Stepney",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001086",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001096",
+        "Constituency name":"Birmingham Ladywood",
+        "Region name":"West Midlands",
+        "First party":"Lab",
+        "PCON24CD":"E14001096",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001117",
+        "Constituency name":"Bracknell",
+        "Region name":"South East",
+        "First party":"Lab",
+        "PCON24CD":"E14001117",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001122",
+        "Constituency name":"Brent East",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001122",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001124",
+        "Constituency name":"Brentford and Isleworth",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001124",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001125",
+        "Constituency name":"Brentwood and Ongar",
+        "Region name":"East of England",
+        "First party":"Con",
+        "PCON24CD":"E14001125",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001130",
+        "Constituency name":"Brighton Pavilion",
+        "Region name":"South East",
+        "First party":"Green",
+        "PCON24CD":"E14001130",
+        "gails_count":2,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001131",
+        "Constituency name":"Bristol Central",
+        "Region name":"South West",
+        "First party":"Green",
+        "PCON24CD":"E14001131",
+        "gails_count":3,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001137",
+        "Constituency name":"Bromley and Biggin Hill",
+        "Region name":"London",
+        "First party":"Con",
+        "PCON24CD":"E14001137",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001145",
+        "Constituency name":"Bury South",
+        "Region name":"North West",
+        "First party":"Lab",
+        "PCON24CD":"E14001145",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001149",
+        "Constituency name":"Cambridge",
+        "Region name":"East of England",
+        "First party":"Lab",
+        "PCON24CD":"E14001149",
+        "gails_count":3,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001159",
+        "Constituency name":"Chelmsford",
+        "Region name":"East of England",
+        "First party":"LD",
+        "PCON24CD":"E14001159",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001160",
+        "Constituency name":"Chelsea and Fulham",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001160",
+        "gails_count":4,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001162",
+        "Constituency name":"Chesham and Amersham",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001162",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001163",
+        "Constituency name":"Chester North and Neston",
+        "Region name":"North West",
+        "First party":"Lab",
+        "PCON24CD":"E14001163",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001167",
+        "Constituency name":"Chingford and Woodford Green",
+        "Region name":"London",
+        "First party":"Con",
+        "PCON24CD":"E14001167",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001169",
+        "Constituency name":"Chipping Barnet",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001169",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001172",
+        "Constituency name":"Cities of London and Westminster",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001172",
+        "gails_count":16,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001175",
+        "Constituency name":"Clapham and Brixton Hill",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001175",
+        "gails_count":2,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001205",
+        "Constituency name":"Dulwich and West Norwood",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001205",
+        "gails_count":2,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001207",
+        "Constituency name":"Ealing Central and Acton",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001207",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001214",
+        "Constituency name":"East Hampshire",
+        "Region name":"South East",
+        "First party":"Con",
+        "PCON24CD":"E14001214",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001222",
+        "Constituency name":"Ellesmere Port and Bromborough",
+        "Region name":"North West",
+        "First party":"Lab",
+        "PCON24CD":"E14001222",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001224",
+        "Constituency name":"Ely and East Cambridgeshire",
+        "Region name":"East of England",
+        "First party":"LD",
+        "PCON24CD":"E14001224",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001226",
+        "Constituency name":"Epping Forest",
+        "Region name":"East of England",
+        "First party":"Con",
+        "PCON24CD":"E14001226",
+        "gails_count":2,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001227",
+        "Constituency name":"Epsom and Ewell",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001227",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001230",
+        "Constituency name":"Esher and Walton",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001230",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001234",
+        "Constituency name":"Farnham and Bordon",
+        "Region name":"South East",
+        "First party":"Con",
+        "PCON24CD":"E14001234",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001238",
+        "Constituency name":"Finchley and Golders Green",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001238",
+        "gails_count":2,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001249",
+        "Constituency name":"Godalming and Ash",
+        "Region name":"South East",
+        "First party":"Con",
+        "PCON24CD":"E14001249",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001257",
+        "Constituency name":"Greenwich and Woolwich",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001257",
+        "gails_count":3,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001258",
+        "Constituency name":"Guildford",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001258",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001259",
+        "Constituency name":"Hackney North and Stoke Newington",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001259",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001264",
+        "Constituency name":"Hammersmith and Chiswick",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001264",
+        "gails_count":4,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001265",
+        "Constituency name":"Hampstead and Highgate",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001265",
+        "gails_count":6,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001268",
+        "Constituency name":"Harpenden and Berkhamsted",
+        "Region name":"East of England",
+        "First party":"LD",
+        "PCON24CD":"E14001268",
+        "gails_count":2,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001279",
+        "Constituency name":"Hendon",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001279",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001280",
+        "Constituency name":"Henley and Thame",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001280",
+        "gails_count":2,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001284",
+        "Constituency name":"Hertsmere",
+        "Region name":"East of England",
+        "First party":"Con",
+        "PCON24CD":"E14001284",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001287",
+        "Constituency name":"High Peak",
+        "Region name":"East Midlands",
+        "First party":"Lab",
+        "PCON24CD":"E14001287",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001289",
+        "Constituency name":"Hitchin",
+        "Region name":"East of England",
+        "First party":"Lab",
+        "PCON24CD":"E14001289",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001290",
+        "Constituency name":"Holborn and St Pancras",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001290",
+        "gails_count":10,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001293",
+        "Constituency name":"Hornsey and Friern Barnet",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001293",
+        "gails_count":2,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001294",
+        "Constituency name":"Horsham",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001294",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001296",
+        "Constituency name":"Hove and Portslade",
+        "Region name":"South East",
+        "First party":"Lab",
+        "PCON24CD":"E14001296",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001305",
+        "Constituency name":"Islington North",
+        "Region name":"London",
+        "First party":"Ind",
+        "PCON24CD":"E14001305",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001306",
+        "Constituency name":"Islington South and Finsbury",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001306",
+        "gails_count":3,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001310",
+        "Constituency name":"Kensington and Bayswater",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001310",
+        "gails_count":5,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001312",
+        "Constituency name":"Kingston and Surbiton",
+        "Region name":"London",
+        "First party":"LD",
+        "PCON24CD":"E14001312",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001330",
+        "Constituency name":"Lewes",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001330",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001332",
+        "Constituency name":"Lewisham North",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001332",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001333",
+        "Constituency name":"Lewisham West and East Dulwich",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001333",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001334",
+        "Constituency name":"Leyton and Wanstead",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001334",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001347",
+        "Constituency name":"Macclesfield",
+        "Region name":"North West",
+        "First party":"Lab",
+        "PCON24CD":"E14001347",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001352",
+        "Constituency name":"Manchester Central",
+        "Region name":"North West",
+        "First party":"Lab",
+        "PCON24CD":"E14001352",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001354",
+        "Constituency name":"Manchester Withington",
+        "Region name":"North West",
+        "First party":"Lab",
+        "PCON24CD":"E14001354",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001376",
+        "Constituency name":"Newbury",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001376",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001392",
+        "Constituency name":"North East Hampshire",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001392",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001420",
+        "Constituency name":"Oxford West and Abingdon",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001420",
+        "gails_count":2,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001430",
+        "Constituency name":"Poplar and Limehouse",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001430",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001434",
+        "Constituency name":"Putney",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001434",
+        "gails_count":3,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001435",
+        "Constituency name":"Queen's Park and Maida Vale",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001435",
+        "gails_count":4,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001438",
+        "Constituency name":"Reading Central",
+        "Region name":"South East",
+        "First party":"Lab",
+        "PCON24CD":"E14001438",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001442",
+        "Constituency name":"Reigate",
+        "Region name":"South East",
+        "First party":"Con",
+        "PCON24CD":"E14001442",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001445",
+        "Constituency name":"Richmond Park",
+        "Region name":"London",
+        "First party":"LD",
+        "PCON24CD":"E14001445",
+        "gails_count":4,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001454",
+        "Constituency name":"Ruislip, Northwood and Pinner",
+        "Region name":"London",
+        "First party":"Con",
+        "PCON24CD":"E14001454",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001456",
+        "Constituency name":"Runnymede and Weybridge",
+        "Region name":"South East",
+        "First party":"Con",
+        "PCON24CD":"E14001456",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001465",
+        "Constituency name":"Sevenoaks",
+        "Region name":"South East",
+        "First party":"Con",
+        "PCON24CD":"E14001465",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001479",
+        "Constituency name":"Solihull West and Shirley",
+        "Region name":"West Midlands",
+        "First party":"Con",
+        "PCON24CD":"E14001479",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001503",
+        "Constituency name":"Southgate and Wood Green",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001503",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001507",
+        "Constituency name":"St Albans",
+        "Region name":"East of England",
+        "First party":"LD",
+        "PCON24CD":"E14001507",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001525",
+        "Constituency name":"Stratford and Bow",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001525",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001526",
+        "Constituency name":"Stratford-on-Avon",
+        "Region name":"West Midlands",
+        "First party":"LD",
+        "PCON24CD":"E14001526",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001539",
+        "Constituency name":"Tatton",
+        "Region name":"North West",
+        "First party":"Con",
+        "PCON24CD":"E14001539",
+        "gails_count":2,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001550",
+        "Constituency name":"Tooting",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001550",
+        "gails_count":2,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001555",
+        "Constituency name":"Tunbridge Wells",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001555",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001556",
+        "Constituency name":"Twickenham",
+        "Region name":"London",
+        "First party":"LD",
+        "PCON24CD":"E14001556",
+        "gails_count":3,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001559",
+        "Constituency name":"Vauxhall and Camberwell Green",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001559",
+        "gails_count":2,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001563",
+        "Constituency name":"Walthamstow",
+        "Region name":"London",
+        "First party":"Lab",
+        "PCON24CD":"E14001563",
+        "gails_count":1,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001566",
+        "Constituency name":"Warwick and Leamington",
+        "Region name":"West Midlands",
+        "First party":"Lab",
+        "PCON24CD":"E14001566",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001568",
+        "Constituency name":"Watford",
+        "Region name":"East of England",
+        "First party":"Lab",
+        "PCON24CD":"E14001568",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001586",
+        "Constituency name":"Wimbledon",
+        "Region name":"London",
+        "First party":"LD",
+        "PCON24CD":"E14001586",
+        "gails_count":2,
+        "is_London":true
+    },
+    {
+        "ONS ID":"E14001588",
+        "Constituency name":"Windsor",
+        "Region name":"South East",
+        "First party":"Con",
+        "PCON24CD":"E14001588",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001591",
+        "Constituency name":"Witney",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001591",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001592",
+        "Constituency name":"Woking",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001592",
+        "gails_count":2,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001593",
+        "Constituency name":"Wokingham",
+        "Region name":"South East",
+        "First party":"LD",
+        "PCON24CD":"E14001593",
+        "gails_count":1,
+        "is_London":false
+    },
+    {
+        "ONS ID":"E14001602",
+        "Constituency name":"Wythenshawe and Sale East",
+        "Region name":"North West",
+        "First party":"Lab",
+        "PCON24CD":"E14001602",
+        "gails_count":1,
+        "is_London":false
+    }
+]

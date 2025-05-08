@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Greggs and Pret Map</title>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+  <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .legend {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: white;
+      padding: 6px 10px;
+      font-size: 13px;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .legend div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .legend div span {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin-right: 6px;
+    }
+
+    .tooltip {
+      position: absolute;
+      background: white;
+      padding: 5px 8px;
+      font-size: 12px;
+      pointer-events: none;
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <div class="legend">
+    <div><span style="background:#ffc20e"></span> Greggs</div>
+    <div><span style="background:#7a1e27"></span> Pret</div>
+  </div>
+  <div class="tooltip" id="tooltip"></div>
+
+  <script>
+    const greggsColor = 'rgba(255, 194, 14, 0.6)';
+    const pretColor = 'rgba(122, 30, 39, 0.6)';
+
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: 'style.json',
+      center: [-1.5, 52.6],
+      zoom: 5
+    });
+
+    map.addControl(new maplibregl.NavigationControl(), 'top-right');
+
+    fetch('locations.json')
+      .then(res => res.json())
+      .then(data => {
+        const features = data.map(d => ({
+          type: "Feature",
+          geometry: {
+            type: "Point",
+            coordinates: [d.lng, d.lat]
+          },
+          properties: {
+            type: d.type,
+            city: d.city,
+            street: d.streetAndNumber
+          }
+        }));
+
+        const geojson = {
+          type: "FeatureCollection",
+          features
+        };
+
+        map.on('load', () => {
+          map.addSource('shops', {
+            type: 'geojson',
+            data: geojson
+          });
+
+          // Greggs first (underneath)
+          map.addLayer({
+            id: 'greggs-layer',
+            type: 'circle',
+            source: 'shops',
+            filter: ['==', ['get', 'type'], 'greggs'],
+            paint: {
+              'circle-radius': 2.5,
+              'circle-color': greggsColor,
+              'circle-opacity': 0.6,
+              'circle-stroke-width': 0
+            }
+          });
+
+          // Pret second (on top)
+          map.addLayer({
+            id: 'pret-layer',
+            type: 'circle',
+            source: 'shops',
+            filter: ['==', ['get', 'type'], 'prett'],
+            paint: {
+              'circle-radius': 2.5,
+              'circle-color': pretColor,
+              'circle-opacity': 0.6,
+              'circle-stroke-width': 0
+            }
+          });
+
+          const tooltip = document.getElementById('tooltip');
+
+          map.on('mousemove', (e) => {
+            const features = map.queryRenderedFeatures(e.point, {
+              layers: ['pret-layer', 'greggs-layer']
+            });
+
+            if (features.length > 0) {
+              const f = features[0];
+              tooltip.style.display = 'block';
+              tooltip.style.left = e.point.x + 10 + 'px';
+              tooltip.style.top = e.point.y + 10 + 'px';
+              tooltip.innerHTML = `<strong>${f.properties.street}</strong><br>${f.properties.city}`;
+              map.getCanvas().style.cursor = 'pointer';
+            } else {
+              tooltip.style.display = 'none';
+              map.getCanvas().style.cursor = '';
+            }
+          });
+
+          map.on('mouseleave', 'pret-layer', () => {
+            tooltip.style.display = 'none';
+            map.getCanvas().style.cursor = '';
+          });
+
+          map.on('mouseleave', 'greggs-layer', () => {
+            tooltip.style.display = 'none';
+            map.getCanvas().style.cursor = '';
+          });
+        });
+      });
+  </script>
+</body>
+</html>
